@@ -65,6 +65,7 @@ def euclidean_distance(A, B):
     diff = A[:, None, :] - B[None, :, :]       
     return np.sqrt(np.sum(diff**2, axis=2))    
 
+# NN 
 dist   = euclidean_distance(test_x, train_x)   
 nn_idx  = np.argmin(dist, axis=1)              
 nn_lab  = label[nn_idx]                        
